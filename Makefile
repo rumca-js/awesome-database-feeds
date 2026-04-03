@@ -63,6 +63,8 @@ merge:
 	poetry run python dbfeeds.py --merge --merge-db converted.db --old-feeds-db feeds.db --output-db feeds_new.db
 	rm feeds.db
 	mv feeds_new.db feeds.db
+	rm converted.db
+	rm places.db
 
 update:
 	poetry run python dbfeeds.py --update --db feeds.db
