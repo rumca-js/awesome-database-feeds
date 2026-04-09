@@ -30,3 +30,9 @@ unpack feeds.zip
 python3 -m http.server 8000          # start server
 https://localhost:8000/search.html   # visit
 ```
+
+# Sources
+
+This project uses sources:
+ - https://raw.githubusercontent.com/rumca-js/RSS-Link-Database/refs/heads/main/sources.json
+ - https://raw.githubusercontent.com/wokenlex/infobubble-support/refs/heads/main/Sources/all.sources.rss.yaml
