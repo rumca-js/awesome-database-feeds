@@ -10,7 +10,6 @@ zip:
 	zip -s 50m $(ARCHIVE_NAME) $(SOURCE_FILE)
 	echo "Packed $(SOURCE_FILE) into $(ARCHIVE_NAME)"
 	rm -f $(SOURCE_FILE)
-	rm tmp.db
 
 unzip:
 	[ -e $(SOURCE_FILE) ] && rm -r $(SOURCE_FILE) || true
@@ -65,6 +64,7 @@ merge:
 	mv feeds_new.db feeds.db
 	rm converted.db
 	rm places.db
+	rm tmp.db
 
 update:
 	poetry run python dbfeeds.py --update --db feeds.db
