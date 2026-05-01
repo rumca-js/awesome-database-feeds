@@ -36,3 +36,10 @@ https://localhost:8000/search.html   # visit
 This project uses sources:
  - https://raw.githubusercontent.com/rumca-js/RSS-Link-Database/refs/heads/main/sources.json
  - https://raw.githubusercontent.com/wokenlex/infobubble-support/refs/heads/main/Sources/all.sources.rss.yaml
+
+# awesome databases
+
+ - https://github.com/rumca-js/awesome-database-awesomelists
+ - https://github.com/rumca-js/awesome-database-top
+ - https://github.com/rumca-js/awesome-database-feeds
+ - https://github.com/rumca-js/Internet-Places-Database
