@@ -48,9 +48,9 @@ summary:
 	poetry run python dataanalyzer.py --summary --db $(SOURCE_FILE)
 
 example-search:
-	poetry run python ./dataanalyzer.py --db internet.db --search "*Warhammer*" --tags --social --title --description --status
+	poetry run python ./dataanalyzer.py --db feeds.db --search "*Warhammer*" --tags --social --title --description --status
 example-search2:
-	poetry run python ./dataanalyzer.py --db internet.db --search "*youtube.com/channel*" --title --tags --social
+	poetry run python ./dataanalyzer.py --db feeds.db --search "*youtube.com/channel*" --title --tags --social
 
 download-data:
 	wget https://github.com/plenaryapp/awesome-rss-feeds/archive/refs/heads/master.zip
