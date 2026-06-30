@@ -3,7 +3,7 @@ ARCHIVE_NAME = feeds.zip
 SOURCE_FILE = feeds.db
 
 # Declare phony targets
-.PHONY: zip zip-only unzip clean server pack-split unpack-split example-search example-search2 merge update
+.PHONY: zip zip-only unzip clean server pack-split unpack-split example-search search-youtube merge update
 
 # Rule to create a zip archive split into 50MB parts
 zip:
@@ -49,8 +49,10 @@ summary:
 
 example-search:
 	poetry run python ./dataanalyzer.py --db feeds.db --search "*Warhammer*" --tags --social --title --description --status
-example-search2:
-	poetry run python ./dataanalyzer.py --db feeds.db --search "*youtube.com/channel*" --title --tags --social
+
+search-youtube:
+	#poetry run python ./dataanalyzer.py --db feeds.db --search "*youtube.com/channel*" --title --tags --social
+	poetry run python ./dataanalyzer.py --db feeds.db --search "*videos.xml?channel*"
 
 download-data:
 	wget https://github.com/plenaryapp/awesome-rss-feeds/archive/refs/heads/master.zip
