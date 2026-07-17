@@ -1,5 +1,5 @@
 # Define variables
-ARCHIVE_NAME = feeds.zip
+ARCHIVE_NAME = feeds.db.zip
 SOURCE_FILE = feeds.db
 
 # Declare phony targets
