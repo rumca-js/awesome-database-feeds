@@ -1,6 +1,6 @@
 # Internet-feeds
 
-This is a database of Internet feeds. Just unzip <b>feeds.zip</b>!
+This is a database of Internet feeds. Just unzip <b>feeds.db.zip</b>!
 
 The archive contains a SQLite database, generated from various curated link collections 
  - (e.g. the https://github.com/rumca-js/Internet-Places-Database project)
