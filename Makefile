@@ -60,13 +60,21 @@ download-data:
 	rm master.zip
 
 merge:
-	poetry run python dbfeeds.py --convert --db places.db --output-db converted.db
+	wget https://github.com/rumca-js/awesome-database-top/raw/refs/head/main/internet.db.zip
+	unzip internet.db.zip
+	poetry run python dbfeeds.py --convert --db internet.db --output-db converted.db
 	poetry run python dbfeeds.py --merge --merge-db converted.db --old-feeds-db feeds.db --output-db feeds_new.db
 	rm feeds.db
 	mv feeds_new.db feeds.db
 	rm converted.db
-	rm places.db
+	rm internet.db
 	rm tmp.db
 
-update:
-	poetry run python dbfeeds.py --update --db feeds.db
+# adds from awesome lists, etc.
+# The lists fetch and add into table. Should we add 'jobs' only, though?
+add-lists:
+	poetry run python dbfeeds.py --add-lists --output-db feeds.db
+
+# not necessary any more. Current feeds are updated by yafr instance
+# update:
+#	poetry run python dbfeeds.py --update --db feeds.db
